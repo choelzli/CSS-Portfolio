@@ -8,18 +8,17 @@
     --white: #f1f5cf;
   }
   
-  /* set content highlight color and background */
-  ::selection {
-    background-color: var(--periwinkle);
-    color: var(--gin);
-  }
+/* set content highlight color and background */
+::selection {
+background-color: var(--periwinkle);
+color: var(--gin);
+}
   
-  html {
-    /* set 1rem to 10px instead of native 16px to make it easier to calculate font-size values for the rest of the page (e.g. 1.6rem is 16px, 2.0rem is 20px, etc.) */
-    font-size: 62.5%;
-  }
+html {
+/* set 1rem to 10px instead of native 16px to make it easier to calculate font-size values for the rest of the page (e.g. 1.6rem is 16px, 2.0rem is 20px, etc.) */font-size: 62.5%;
+}
   
-  body {
+body {
     /* Sans Serif font stack is implemented to help select the best font for each type of computer operating system */
     font-family: Arial, Helvetica, sans-serif;
   
@@ -30,28 +29,28 @@
     background-color: var(--white);
   }
   
-  header {
+header {
     width: 96%;
     text-align: left;
   }
   
-  h1 {
+h1 {
     /* 4rem = 40px (4 * 10px) */
     font-size: 4rem;
     color: var(--gin);
     display: inline-block;
   }
   
-  header h1.first-name {
+header h1.first-name {
     padding: 1rem 1.2rem;
     font-size: 4.5rem;
   }
   
-  header h1 .lastname {
+header h1 .lastname {
     color:  var(--bright-turquoise)
   }
   
-  header nav {
+header nav {
     padding: 1.2rem;
     float: right;
     margin-top: 1.2rem;
@@ -59,26 +58,99 @@
     font-size: 2.5rem;
   }
   
-  header nav ul {
+header nav ul {
     list-style-type: none;
   }
   
-  header nav ul li {
+header nav ul li {
     text-decoration: none;
     display: inline-block;
     margin-left: 10px;
   }
   
-  a {
+a {
     text-decoration: none;
     color: var(--periwinkle)
   }
   
-  .hero {
+.hero {
     height: 500px;
     width: 100%;
     margin-bottom: 25px;
     background-image: url("../images/rainier.jpg");
     background-size: cover;
     background-position:right;
+  }
+
+figure {
+    display: flex;
+  }
+
+h2,
+h3{
+  color: var(--gin);
+  font-weight: 700;
+  text-align: center;
+}
+
+h2 {
+  font-size: 3.75rem;
+}
+
+img {
+    max-width: 25%;
+    height:auto;
+    margin:auto;
+  }
+
+main {
+    width: 96%;
+    margin: 2rem auto;
+  }
+
+p {
+    padding:2%;
+    margin-bottom: 1rem;
+    float: right;
+  }
+
+/* set base column width to be 100% and update it using media queries for larger screen sizes */ */
+.card-column {
+    flex: 1 0 100%;
+    padding: 1.5rem;
+    /* when the screen resizes, make it so our columns don't jump in size */
+    transition: flex-basis 500ms linear;
+    margin-bottom: 1.5rem;
+  }
+
+  /* make each code card a flexbox column to align and justify content within it */
+.code-card {
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    min-height: 100%;
+    padding: 2rem;
+    color: var(--gin);
+  
+    /* outline is like border, but on the outside of the box instead of inside */
+    outline: 5px solid var(--gin);
+    outline-offset: -2px;
+    transition: all 0.5s ease-in-out;
+  }
+    
+  /* set an outer and inner drop shadow on the card to create a glowing effect on hover */
+.code-card:hover,
+.code-card:hover .card-header {
+  box-shadow: inset 0px 0px 25px var(--bright-turquoise), 0 0 25px var(--bright-turquoise);
+}
+
+.code-card .about-header {
+    position: static;
+    margin: 1.5rem 3rem 30rem 0;
+    padding: 0.5rem 1rem;
+    background-color: var(--gin);
+    color: var(--outer-space);
+    border: 2px solid var(--gin);
+    border-radius: 8px;
+    transition: all 0.5s ease-in-out;
   }
