@@ -9,7 +9,7 @@ This repository was made from scratch to showcase my CSS skills and present my p
 
 ## Installation
 
-The code may be accessed on [GitHub](https://github.com/choelzli/CSS-Portfolio) or visiting the site URL.
+The code may be accessed on [GitHub](https://github.com/choelzli/CSS-Portfolio) or visiting the site URL (https://choelzli.github.io/CSS-Portfolio/).
 
 Clone the repo:
 ```
