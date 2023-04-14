@@ -101,6 +101,7 @@ img {
     max-width: 25%;
     height:auto;
     margin:auto;
+    margin-top: 1.5rem;
   }
 
 main {
@@ -146,11 +147,85 @@ p {
 
 .code-card .about-header {
     position: static;
-    margin: 1.5rem 3rem 30rem 0;
+    margin: auto;
+    margin-right: 2.5rem;
+    margin-top:1.5rem;
     padding: 0.5rem 1rem;
     background-color: var(--gin);
     color: var(--outer-space);
     border: 2px solid var(--gin);
     border-radius: 8px;
     transition: all 0.5s ease-in-out;
+  }
+
+a {
+    text-decoration: none;
+    color: var(--periwinkle)
+  }
+
+.code-card .work-header {
+    position: static;
+    margin: auto;
+    margin-right: 2.5rem;
+    margin-top:1.5rem;
+    margin-left: 1px;
+    padding: 0.5rem 1rem;
+    background-color: var(--gin);
+    color: var(--outer-space);
+    border: 2px solid var(--gin);
+    border-radius: 8px;
+    transition: all 0.5s ease-in-out;
+  }
+  
+#work-grid {
+    margin-top:1.5rem;
+    display: grid;
+    max-height: 100%;
+    width:100%;
+    grid-template-rows: 80% 20%;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas: 
+    "first-app first-app first-app"
+    "second-app third-app fourth-app";
+  }
+
+#first-app {
+    grid-area: first-app;
+    max-width:100%;
+    display: flex;
+    justify-content: center;
+  }
+  
+#second-app {
+    grid-area: second-app;
+    max-width:75%;
+    justify-self:start;
+    max-height:200px;
+    display: flex;
+  }
+  
+#third-app {
+    grid-area: third-app;
+    max-width:75%;
+    justify-self:center;
+    max-height:200px;
+    display: flex;
+  }
+
+#fourth-app {
+    grid-area: fourth-app;
+    max-width:75%;
+    align-self:start;
+    justify-self:end;
+    max-height:200px;
+    display: flex;
+  }
+  
+.word-grid-area {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    align-items:center;
+    display: flex;
+    position: relative;
   }
