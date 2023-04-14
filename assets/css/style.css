@@ -268,4 +268,43 @@ footer ul li {
     background: #430297;
     color: white;
   }
+
+@media screen and (max-width: 698px) {
+/* Ensures my last name drops below first name when reducing the screen size */
+    .first-name {
+      max-width: 25%;
+    }
+
+/* Ensures nav bar does not intersect with my name */
+    nav {
+      max-width: 40%;
+      text-align:right; 
+    }
+  
+    .fa {
+        border-radius: 55rem;
+    }
+    
+  }
+@media screen and (max-width: 1199px) {
+    /*Change orientation of flex box from horizontal to vertical*/
+    .code-card {
+        max-width: 100%;
+        flex-direction:column;
+      } 
+/* Ensures header background does not stretch over the whole row of the flexbox */
+    .code-card .about-header {
+      position:static;
+      margin: auto;
+    }
+    .code-card .work-header {
+      position:static;
+      margin: auto;
+    }
+
+    .fa {
+        border-radius: auto;
+    }
+    
+  }
   
